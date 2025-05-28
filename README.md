@@ -23,6 +23,35 @@
 - Cinemachine 카메라 시스템
   
 </details>
-
+<details>
+	<summary><b>구현 내용</b></summary>
+	
+- Player Input System 구현
+- 2D Cell Animation 제작
+- 무한 맵 적용
+- 몬스터 구현
+  
+</details>
 > My Blog Link
->   > *https://sunlight-dby.tistory.com/57*
+>   > *https://sunlight-dby.tistory.com/57*  
+
+### Day 2
+<details>
+	<summary><b>정리 내용</b></summary>
+	
+- 
+  
+</details>
+<details>
+	<summary><b>구현 내용</b></summary>
+	
+- Object Pooling을 위한 Pool Manager 생성 및 구현
+- 소환 레벨 적용
+- 무기 구현
+	- 회전하는 근접 무기
+	- 자동 원거리 공격
+- 몬스터 처리 애니메이션 및 넉백 적용
+  
+</details>
+> My Blog Link
+>   > *https://sunlight-dby.tistory.com/59*  
