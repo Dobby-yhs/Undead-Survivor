@@ -39,7 +39,26 @@
 <details>
 	<summary><b>정리 내용</b></summary>
 	
-- 
+- 트랜스폼과 인스펙터 유용 팁
+	- Transform의 Scale 속성 : 비율 고정 기능
+ 	- Inspector의 자물쇠 아이콘
+  	- Header 속성
+  	- 직렬화 (Serialization)
+  	- 콜라이더 컴포넌트 리셋
+  - 프리팹과 오브젝트 풀링
+  	- 프리팹 생성
+   	- 프리팹의 한계
+	- 오브젝트 풀링
+- GetComponentsInChildren<T>( )
+- Null 체크
+- 애니메이터 설정
+- 부모 오브젝트
+- 스프라이트의 레이어 순서 설정
+- 레이어 (Layer)
+- AddForce( )
+- FromToRotation( )
+- 충돌체 감지를 위한 Cast 계열 함수
+- 넉백 기능을 위한 코루틴 (Coroutine) 활용
   
 </details>
 <details>
