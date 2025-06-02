@@ -74,3 +74,53 @@
 </details>
 > My Blog Link
 >   > *https://sunlight-dby.tistory.com/59*  
+
+### Day 3
+<details>
+	<summary><b>정리 내용</b></summary>
+	
+- RectTransform
+	- 앵커 (Anchor)
+ - Canvas 컴포넌트
+ 	- Render Mode
+  	- UI Scale Mode
+- UI
+	- HUD
+ 	- Text 요소
+  		- Text (Legacy UI Text)
+    		- TextMeshPro
+      	- Image 컴포넌트
+      	- Vertical Layout Group 컴포넌트
+      	- Outline 컴포넌트
+      	- 스크립트에서의 UI
+      		- String.Format을 통한 UI Text 지정
+      	 	- UI의 위치 갱신
+      		- UI 업데이트 타이밍
+      		- name 변수
+	- Navigation
+ - Scriptable Object
+	- Scriptable Object 특징
+ 	- Scriptable Object 생성
+  	- CreateAssetMenu 애트리뷰트
+- 장면 전환과 관리
+- Broadcast Message
+   	- 시그니처
+   	- 유의사항
+- 오브젝트 계층 관련 함수
+	- 비활성화 오브젝트 탐색
+ - [TextArea] 애트리뷰트
+ - 시간 제어
+  
+</details>
+<details>
+	<summary><b>구현 내용</b></summary>
+	
+- HUD 제작
+- 능력 업그레이드
+- 무기 장착
+- 레벨업 시스템
+- 게임 시작과 종료
+  
+</details>
+> My Blog Link
+>   > *https://sunlight-dby.tistory.com/61*  
