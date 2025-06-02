@@ -35,7 +35,6 @@ public class Bullet : MonoBehaviour
         
         if (per == -1)
         {
-            Debug.Log("per is -1");
             rigid.velocity = Vector2.zero;
             gameObject.SetActive(false);
         }
