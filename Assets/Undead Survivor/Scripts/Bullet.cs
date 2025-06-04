@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -18,11 +19,16 @@ public class Bullet : MonoBehaviour
     {
         this.damage = damage;
         this.per = per;
+        Debug.Log("Bullet - Init");
+        if (GameManager.instance.playerId == 3)
+        {
+            Debug.Log($"per : {per}");
+        }
 
         if (per >= 0)
-        {
-            rigid.velocity = dir * 15f;
-        }
+            {
+                rigid.velocity = dir * 15f;
+            }
     }
 
     void OnTriggerEnter2D(Collider2D collision)

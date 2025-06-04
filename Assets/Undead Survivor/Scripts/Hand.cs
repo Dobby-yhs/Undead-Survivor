@@ -31,7 +31,7 @@ public class Hand : MonoBehaviour
             spriter.flipY = bIsReverse;
             spriter.sortingOrder = bIsReverse ? 4 : 6;
         }
-        else if (scanner.nearestTarget)
+        else if (scanner.nearestTarget)  // 원거리 무기
         {
             Vector3 targetPos = scanner.nearestTarget.position;
             Vector3 dir = targetPos - transform.position;
@@ -41,12 +41,6 @@ public class Hand : MonoBehaviour
             bool bIsRotB = transform.localRotation.eulerAngles.z < -90 && transform.localRotation.eulerAngles.z > -270;
             spriter.flipY = bIsRotA || bIsRotB;
             spriter.sortingOrder = 6;
-        }
-        else  // 원거리 무기
-        {
-            transform.localPosition = bIsReverse ? rightPosReverse : rightPos;
-            spriter.flipX = bIsReverse;
-            spriter.sortingOrder = bIsReverse ? 6 : 4;
         }
     }
 }

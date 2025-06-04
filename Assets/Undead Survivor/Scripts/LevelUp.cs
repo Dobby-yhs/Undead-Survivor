@@ -111,50 +111,5 @@ public class LevelUp : MonoBehaviour
         {
             items[index].gameObject.SetActive(true);
         }
-        // }
-
-        // // 그 중에서 랜덤 3개 아이템만 활성화
-        //     int[] random = new int[3];
-        // while (true)
-        // {
-        //     random[0] = itemList[Random.Range(0, itemList.Count)];
-        //     if (items[random[0]].level == items[random[0]].data.damages.Length)
-        //     {
-        //         itemList.Remove(random[0]);
-        //     }
-        //     random[1] = itemList[Random.Range(0, itemList.Count)];
-        //     if (items[random[1]].level == items[random[1]].data.damages.Length)
-        //     {
-        //         itemList.Remove(random[1]);
-        //     }
-        //     random[2] = itemList[Random.Range(0, itemList.Count)];
-        //     if (items[random[2]].level == items[random[2]].data.damages.Length)
-        //     {
-        //         itemList.Remove(random[2]);
-        //     }
-        //     Debug.Log($"3개만 활성화, {random[0]}, {random[1]}, {random[2]}");
-
-        //     if (random[0] != random[1] && random[1] != random[2] && random[0] != random[2])
-        //     {
-        //         Debug.Log("while 문 탈출");
-        //         break;
-        //     }
-        // }
-
-        // for (int index = 0; index < random.Length; index++)
-        // {
-        //     Item randItem = items[random[index]];
-
-        //     // 만렙 아이템의 경우는 소비아이템으로 대체
-        //     if (randItem.level == randItem.data.damages.Length)
-        //     {
-        //         items[4].gameObject.SetActive(true);
-        //     }
-        //     else
-        //     {
-        //         randItem.gameObject.SetActive(true);
-        //     }
-        // }
-        // Debug.Log("===================Next 끝=================");
     }
 }

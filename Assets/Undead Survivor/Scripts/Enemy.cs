@@ -18,7 +18,8 @@ public class Enemy : MonoBehaviour
     Animator anim;
     SpriteRenderer spriter;
 
-    WaitForFixedUpdate wait;
+    WaitForFixedUpdate waitKnockBack;
+    WaitForSeconds waitDead;
 
     void Awake()
     {
@@ -26,7 +27,8 @@ public class Enemy : MonoBehaviour
         coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
         spriter = GetComponent<SpriteRenderer>();
-        wait = new WaitForFixedUpdate();
+        waitKnockBack = new WaitForFixedUpdate();
+        waitDead = new WaitForSeconds(2f);
     }
 
     void FixedUpdate()
@@ -103,12 +105,14 @@ public class Enemy : MonoBehaviour
             {
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
             }
+
+            StartCoroutine(DeadRoutine());
         }
     }
 
     IEnumerator KnockBack()
     {
-        yield return wait;
+        yield return waitKnockBack;
 
         Vector3 playerPos = GameManager.instance.player.transform.position;
         Vector3 dirVec = transform.position - playerPos;
@@ -116,8 +120,10 @@ public class Enemy : MonoBehaviour
         rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse);
     }
 
-    void Dead()
+    IEnumerator DeadRoutine()
     {
+        yield return waitDead;
+
         gameObject.SetActive(false);
     }
 }

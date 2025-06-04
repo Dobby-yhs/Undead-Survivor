@@ -26,17 +26,6 @@ public class Character : MonoBehaviour
 
     public static int Count
     {
-        get
-        {
-            switch (GameManager.instance.playerId)
-            {
-                case 0:
-                    return 1;
-                case 1:
-                    return 1;
-                default:
-                    return 0;
-            }
-        }
+        get { return GameManager.instance.playerId == 3 ? 1 : 0; }
     }
 }

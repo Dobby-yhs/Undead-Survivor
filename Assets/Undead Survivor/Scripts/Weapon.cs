@@ -74,8 +74,6 @@ public class Weapon : MonoBehaviour
             if (data.projectile == GameManager.instance.pool.prefabs[index])
             {
                 prefabId = index;
-                Debug.Log($"PrefabId : {prefabId}");
-                Debug.Log($"count : {count} = data.baseCount : {data.baseCount} * Character.Count : {Character.Count}");
                 break;
             }
         }
@@ -83,7 +81,6 @@ public class Weapon : MonoBehaviour
         switch (id)
         {
             case 0:
-                Debug.Log("id == 0");
                 speed = 150 * Character.WeaponSpeed;
                 Arrange();
                 break;
