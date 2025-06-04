@@ -32,6 +32,7 @@
 - 몬스터 구현
   
 </details>
+
 > My Blog Link
 >   > *https://sunlight-dby.tistory.com/57*  
 
@@ -72,6 +73,7 @@
 - 몬스터 처리 애니메이션 및 넉백 적용
   
 </details>
+
 > My Blog Link
 >   > *https://sunlight-dby.tistory.com/59*  
 
@@ -122,5 +124,37 @@
 - 게임 시작과 종료
   
 </details>
+
 > My Blog Link
 >   > *https://sunlight-dby.tistory.com/61*  
+
+### Day 4
+<details>
+	<summary><b>정리 내용</b></summary>
+	
+- Grid Layout Group 컴포넌트
+- Enum.GetValues
+- PlayerPrefs
+- WaitForSecondsRealtime
+- Unity 오디오 시스템
+	- AudioClip
+ 	- AudioSource
+      	- AudioListener
+      	- Audio High Pass Filter
+      	- 다량의 효과음을 낼 수 있도록 채널 개수 이용
+- Prefab 연결 끊기
+- Level Up System 변경
+  
+</details>
+<details>
+	<summary><b>구현 내용</b></summary>
+	
+- 플레이어 캐릭터 선택
+- 캐릭터 해금 시스템
+- 오디오 시스템 구축
+- 로직 보완
+  
+</details>
+
+> My Blog Link
+>   > *https://sunlight-dby.tistory.com/62*  
