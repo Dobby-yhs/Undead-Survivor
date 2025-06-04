@@ -47,7 +47,7 @@ public class Weapon : MonoBehaviour
 
     public void LevelUp(float damage, int count)
     {
-        this.damage = damage;
+        this.damage = damage * Character.Damage;
         this.count += count;
 
         if (id == 0)
@@ -67,14 +67,15 @@ public class Weapon : MonoBehaviour
 
         // Property Init
         id = data.itemId;
-        damage = data.baseDamage;
-        count = data.baseCount;
-
+        damage = data.baseDamage * Character.Damage;
+        count = data.baseCount * Character.Count;
         for (int index = 0; index < GameManager.instance.pool.prefabs.Length; index++)
         {
             if (data.projectile == GameManager.instance.pool.prefabs[index])
             {
                 prefabId = index;
+                Debug.Log($"PrefabId : {prefabId}");
+                Debug.Log($"count : {count} = data.baseCount : {data.baseCount} * Character.Count : {Character.Count}");
                 break;
             }
         }
@@ -82,11 +83,12 @@ public class Weapon : MonoBehaviour
         switch (id)
         {
             case 0:
-                speed = 150;
+                Debug.Log("id == 0");
+                speed = 150 * Character.WeaponSpeed;
                 Arrange();
                 break;
             default:
-                speed = 0.4f;
+                speed = 0.4f * Character.WeaponRate;
                 break;
         }
 
@@ -121,7 +123,7 @@ public class Weapon : MonoBehaviour
             bullet.Rotate(rotVec);
             bullet.Translate(bullet.up * 1.5f, Space.World);
 
-            bullet.GetComponent<Bullet>().Init(damage, -1, Vector3.zero);  // -1 is Infinity Per.
+            bullet.GetComponent<Bullet>().Init(damage, -100, Vector3.zero);  // -100 is Infinity Per.
         }
     }
 
@@ -140,5 +142,7 @@ public class Weapon : MonoBehaviour
         bullet.position = transform.position;
         bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
         bullet.GetComponent<Bullet>().Init(damage, count, dir);
+
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Range);
     }
 }
